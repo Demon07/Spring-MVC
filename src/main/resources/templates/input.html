@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+	<form name="a" action="save2" method="post">
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td><input type="text" name="name" id="name"></input></td>
+			</tr>
+			<tr>
+				<td>年龄</td>
+				<td><input type="text" name="age" id="age"></input></td>
+			</tr>
+			<tr>
+				<td>手机号码</td>
+				<td><input type="text" name="tell" id="tell"></input></td>
+			</tr>
+		</table>
+		<input id="click" type="submit" value="提交"></input>
+	</form>
+</div>
+</body>
+<script src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){  
+	
+	 $("#click").click(function(){	
+		alert("正在提交......")
+		if($("#name").val() == ""||$("#name").val() == null){
+			alert("姓名不能为空！")
+		}
+		if($("#age").val() == ""||$("#age").val() == null){
+			alert("年龄不能为空！")
+		}
+		if($("#tell").val() == ""||$("#tell").val() == null){
+			alert("电话不能为空！")
+		}
+		if($("#tell").val().length>5){
+			
+			alert("电话不能超过五位数！")
+			return false;
+		}	
+		 
+	   });
+});
+</script>
+</html>
