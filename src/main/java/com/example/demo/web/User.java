@@ -21,7 +21,33 @@ public class User {
 	@NotNull(message="电话不能为空")
 		@Pattern(regexp=REGEX_MOBILE,message="输入的手机号不合法")
 	String tell;
+	String Id;
 	
+
+	public User(String name, int age, int tell, String id) {
+		super();
+		Name = name;
+		Age = age;
+		Id = id;
+	}
+	
+
+
+	public String getId() {
+		return Id;
+	}
+
+
+	public void setId(String id) {
+		this.Id = id;
+	}
+
+
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	@Override
 	public String toString() {
 		return "User [Name=" + Name + ", Age=" + Age + ", tell=" + tell + ", getName()=" + getName() + ", getAge()="
