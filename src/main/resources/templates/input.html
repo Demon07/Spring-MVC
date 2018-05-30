@@ -6,26 +6,43 @@
 </head>
 <body>
 <div>
+<fieldset>
+		<legend>保存信息</legend>
 	<form name="a" action="save2" method="post">
 		<table>
 			<tr>
 				<td>姓名</td>
 				<td><input type="text" name="name" id="name"></input></td>
+				<td><span th:errors="${user.Name}" th:if="${user!=null}" ></span></td>
 			</tr>
 			<tr>
 				<td>年龄</td>
 				<td><input type="text" name="age" id="age"></input></td>
+				<td><span th:errors="${user.Age}" th:if="${user!=null}" ></span></td>
 			</tr>
 			<tr>
 				<td>手机号码</td>
 				<td><input type="text" name="tell" id="tell"></input></td>
+				<td><span th:errors="${user.tell}" th:if="${user!=null}" ></span></td>
 			</tr>
 		</table>
 		<input id="click" type="submit" value="提交"></input>
 	</form>
+	</fieldset>
 </div>
+
 </body>
 <script src="js/jquery-3.3.1.js"></script>
+<style type="text/css">
+fieldset {
+	width: 500px;
+	height: 250px;
+	margin: 100px auto;
+	padding: 20px;
+}
+span{color: red}
+</style>
+<!-- <script src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript"> 
 $(document).ready(function(){  
 	
@@ -48,5 +65,5 @@ $(document).ready(function(){
 		 
 	   });
 });
-</script>
+</script> -->
 </html>
